@@ -31,10 +31,10 @@ class player(object):
         if self.walkCount +1 >= 27:
             self.walkCount = 0
         if not self.standing:
-            if man.left:
+            if self.left:
                 win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
                 self.walkCount += 1
-            elif man.right:
+            elif self.right:
                 win.blit(walkRight[self.walkCount//3], (self.x,self.y))
                 self.walkCount += 1
         else :
